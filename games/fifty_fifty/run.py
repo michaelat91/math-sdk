@@ -7,7 +7,7 @@ from src.write_data.write_configs import generate_configs
 
 if __name__ == "__main__":
 
-    num_threads = 1
+    num_threads = 5
     batching_size = 50000
     compression = True
     profiling = False
