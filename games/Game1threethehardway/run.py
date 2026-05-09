@@ -1,5 +1,4 @@
-"""Main file for generating results for sample ways-pay game."""
-
+"""Main file for generating results for Three the Hardway ways-pay game."""
 from gamestate import GameState
 from game_config import GameConfig
 from game_optimization import OptimizationSetup
@@ -11,14 +10,15 @@ from src.write_data.write_configs import generate_configs
 
 if __name__ == "__main__":
 
-    num_threads = 5
-    rust_threads =5
-    batching_size = 10000
+    num_threads = 10
+    rust_threads = 20
+    batching_size = 50000
     compression = True
     profiling = False
 
     num_sim_args = {
-        "base": int(1e4),										
+        "base": int(1e4),
+        "bonus": int(1e4),
     }
 
     run_conditions = {
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         "run_analysis": True,
         "run_format_checks": True,
     }
-    target_modes = ["base", "bonus", "superspin"]
+    target_modes = ["base", "bonus"]
 
     config = GameConfig()
     gamestate = GameState(config)

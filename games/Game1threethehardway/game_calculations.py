@@ -1,5 +1,3 @@
-"""Game-specific calculations for 333."""
-
 from src.executables.executables import Executables
 
 
